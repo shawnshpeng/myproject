@@ -5,12 +5,15 @@ public class Hello {
         // System.out.println("Hello world");
         Person person = new Person();
         person.hello();
+        person.weight = 66.5f;
+        person.height = 1.7f;
+        System.out.println(person.bmi());
         /*
          * 基本資料型態：byte short char int long float double boolean
          * 參考資料型態：String
          * 包裝類別：Byte Short Character Integer Long Float Double Boolean
          */
-        int age = 19;
+        /*int age = 19;
         Integer age2 = 19;
         char c = '我';
         Character c2 = 'A';
@@ -19,6 +22,6 @@ public class Hello {
         float height = 1.7f;
         boolean adult = true;
         boolean enroll = false;
-        String name = "Tom";
+        String name = "Tom";*/
     }
 }

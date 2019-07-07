@@ -2,8 +2,9 @@ package com.shawn
 
 fun main() {
     // println("Hello Kotlin")
-    val human = Human()
+    val human = Human(66.5f, 1.7f)
     human.hello()
+    println(human.bmi())
     /*
      * 參考資料型態：Byte Short Int Long Float Double Char Boolean String
      */
@@ -14,7 +15,13 @@ fun main() {
     name = "Shawn"
 }
 
-class Human {
+class Human(var weight: Float, var height: Float) {
+
+    fun bmi(): Float {
+        val bmi = weight / (height * height)
+        return bmi
+    }
+
     fun hello() {
         println("Hello Kotlin")
     }
