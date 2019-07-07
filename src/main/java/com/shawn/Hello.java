@@ -8,6 +8,11 @@ public class Hello {
         person.weight = 66.5f;
         person.height = 1.7f;
         System.out.println(person.bmi());
+        int score = 88;
+        System.out.println(score < 80 || score > 90);
+        // Java 字元可以做數值： '0'=>48, 'A'=>65, 'a'=>97
+        char c = 'A';
+        System.out.println(c > 'a');
         /*
          * 基本資料型態：byte short char int long float double boolean
          * 參考資料型態：String

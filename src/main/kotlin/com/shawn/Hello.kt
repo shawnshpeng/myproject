@@ -8,6 +8,11 @@ fun main() {
     val human = Human(weight = 66.5f, height = 1.7f)
     human.hello()
     println(human.bmi())
+    val score = 88
+    println(score > 60)
+    // Kolin 字元不能做數值，若與數值比較必須轉型
+    val c = 'A'
+    println(c.toInt() > 60)
     /*
      * 參考資料型態：Byte Short Int Long Float Double Char Boolean String
      */
