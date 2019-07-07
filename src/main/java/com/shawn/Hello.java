@@ -3,7 +3,7 @@ package com.shawn;
 public class Hello {
     public static void main(String[] args) {
         // System.out.println("Hello world");
-        Person person = new Person();
+        Person person = new Person("Shawn", 66.5f, 1.7f);
         person.hello();
         person.weight = 66.5f;
         person.height = 1.7f;

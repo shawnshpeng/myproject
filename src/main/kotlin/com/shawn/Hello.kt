@@ -2,7 +2,10 @@ package com.shawn
 
 fun main() {
     // println("Hello Kotlin")
-    val human = Human(66.5f, 1.7f)
+    // 寫法1
+    // val human = Human(66.5f, 1.7f)
+    // 寫法2 可以指定參數做設定
+    val human = Human(weight = 66.5f, height = 1.7f)
     human.hello()
     println(human.bmi())
     /*
@@ -15,7 +18,18 @@ fun main() {
     name = "Shawn"
 }
 
-class Human(var weight: Float, var height: Float) {
+// Primary Constructor：可省略 constructor 關鍵字；參數可以有預設值=>比較不重要的參數放後面
+// 寫法1
+// class Human(weight: Float, var height: Float, var name: String = "") {
+// 寫法2
+class Human(var name: String = "", var weight: Float, var height: Float) {
+    // Primary Constructor 的程式碼區塊
+    init {
+        println("test $weight")
+    }
+
+    // Secondary Constructor：不可用 var/val 關鍵字；使用到 Primary 的參數，要用 this 呼叫
+    // constructor(name: String, weight: Float, height: Float) : this(weight, height)
 
     fun bmi(): Float {
         val bmi = weight / (height * height)
