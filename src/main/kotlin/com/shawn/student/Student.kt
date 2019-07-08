@@ -11,16 +11,20 @@ fun main() {
 
 class Student(var name: String?, var english: Int, var math: Int) {
     fun print() {
-        println(name + "\t" + english + "\t" + math + "\t" + (english + math) / 2)
+        println(name + "\t" + english + "\t" + math + "\t" + getAverage() + "\t"+ if (getAverage()>=60) "PASS" else "FAILED")
+    }
+
+    fun getAverage(): Int {
+        return (english + math) / 2
     }
 
     fun highest(): Int {
         var max = if (english > math) {
-            println(english)
+            println("english")
             // Kotlin 方法區塊最後一行的值會被運算結果回傳
             english
         } else {
-            println(math)
+            println("math")
             math
         }
         return max
