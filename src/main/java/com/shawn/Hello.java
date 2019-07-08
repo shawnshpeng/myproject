@@ -2,7 +2,11 @@ package com.shawn;
 
 public class Hello {
     public static void main(String[] args) {
-        // System.out.println("Hello world");
+        String s = "abcde";
+        // s = null;
+        System.out.println(s.charAt(3));
+        System.out.println(s.length());
+        System.out.println(s.substring(1, 4));
         Person person = new Person("Shawn", 66.5f, 1.7f);
         person.hello();
         person.weight = 66.5f;

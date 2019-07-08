@@ -1,6 +1,13 @@
 package com.shawn
 
 fun main() {
+    // "型態?"（Safe Call）允許空值的型態，可防止 NullPointerException
+    // 如果需要自己來處理 Exception，可使用"型態!!"（Not-Null assertion）
+    var s: String? = "abcde"
+    s = null
+    println(s?.length)
+    println(s?.get(3))
+    println(s?.substring(3))
     // println("Hello Kotlin")
     // 寫法1
     // val human = Human(66.5f, 1.7f)
