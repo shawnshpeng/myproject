@@ -22,5 +22,5 @@ class Car(val id: String, val enter: LocalDateTime) {
             }
         }
 
-    fun duration(): Long = Duration.between(enter, leave).toMinutes()
+    fun duration() = Duration.between(enter, leave).toMinutes()
 }
