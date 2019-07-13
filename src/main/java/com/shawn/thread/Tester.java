@@ -12,6 +12,11 @@ public class Tester {
             public void run() {
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Thread: " + i);
+                    try {
+                        sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         };
@@ -27,11 +32,30 @@ public class Tester {
             public void run() {
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Runnable: " + i);
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         };
         Thread r = new Thread(runnable);
         r.start();
+
+        // 建立 Thread 方式 4 - Runnable by Lambda
+        // Runnable 介面，只需實作一個 run() 方法
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Runnable lambda: " + i);
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
         System.out.println("main end");
     }
 }
@@ -42,6 +66,11 @@ class MyThread extends Thread {
     public void run() {
         for (int i = 0; i < 10; i++) {
             System.out.println(getName() + ":" + i);
+            try {
+                sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
