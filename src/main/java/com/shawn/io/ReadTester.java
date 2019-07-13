@@ -2,7 +2,7 @@ package com.shawn.io;
 
 import java.io.*;
 
-public class Tester {
+public class ReadTester {
     public static void main(String[] args) {
         // 適用亞洲語系
         bufferedReader();
